@@ -1,0 +1,573 @@
+
+@import url("https://fonts.googleapis.com/css?family=Alegreya:900|Open+Sans|Slabo+27px&display=swap");
+
+    /* establezco el color de fondo de la nav bar y le pongo el fixed position */
+.navbar {
+  background-color: #fffbf7;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: #025157;
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+/* establecemos el estilo para la lista desorganizada en este caso los links del menu  */
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.actions a {
+  color: #67b54b;
+}
+.actions > * {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.actions button {
+  color: white;
+  background-color: #67b54b;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 0;
+  border-radius: 5px;
+}
+.actions > * {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* establecemos el color background del body  */
+body {
+  background-color: #fffbf7;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* dejo un margen a la etiqueta main de 285px y alineo el texto al centro */
+main {
+  margin-top: 285px;
+  text-align: center;
+}
+
+/* establezco la altura de los forms a 55px, el color de background, el border radious para redondear el boton */
+form {
+  height: 55px;
+}
+
+input {
+  border: 1px solid #b6b6b6;
+  padding: 6px 20px;
+  width: 60%;
+  max-width: 250px;
+}
+
+input,
+button {
+  height: 100%;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #025157;
+  color: #fff;
+  border: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 6px 20px;
+  margin-left: -10px;
+}
+
+/* a la imagen principal le doy un ancho fijo del 70% */
+figure.intro > img {
+  width: 70%;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+/* Esta es la clase de la imagen banner donde puse unas estrellas, le doy un ancho fijo de 300px, alineacion vertical
+al medio y sin diseño de borde */
+figure.banner > img {
+  width: 300px;
+  vertical-align: middle;
+  border-style: none;
+}
+
+/* establezco el color, la fuente o los margenes para todos los h1, h3 y P del documento */
+h1 {
+  color: #ff4859;
+  font-family: "Alegreya", serif;
+  font-size: 60px;
+  margin-bottom: 24px;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.explanatory-video {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  object-fit: contain;
+}
+
+.promo {
+  display: flex;
+  max-width: 70%;
+  margin: 100px auto;
+  align-items: center;
+}
+
+/* establezco que todos estos elementos seran del tipo display block  */
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+.publish {
+  flex: 1;
+}
+
+.publish h3 {
+  font-family: "Alegreya", serif;
+  font-size: 40px;
+  line-height: 48px;
+  color: #ff4859;
+}
+
+/* aqui hago un estilo especial para los parrafos que se encuentren en la clase publish */
+.publish > p {
+  font-size: 16px;
+  color: #343434;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* aqui empezamos con el css de los cuadritos de blog */
+.features {
+  background-color: #025157;
+  padding: 5% 10%;
+  display: grid;
+  grid-template: repeat(2, 330px) / repeat(2, 1fr);
+}
+
+.features .feature-card {
+  margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.features .feature-card .feature-content {
+  padding: 30px 20px 40px 40px;
+  flex: 2;
+}
+
+.features .feature-card .feature-content a {
+    font-size: 16px;
+    color: #67b54b;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+.features .feature-card .feature-image {
+  flex: 1;
+  width: 40%;
+  position: relative;
+  right: -50px;
+  height: 80%;
+}
+
+.features .feature-card .feature-image figure,
+.features .feature-card .feature-image img {
+  margin-top: 0;
+  height: 100%;
+}
+
+/* aqui modifico los figure por ejemplo el de las 3 imagenes que estan en success stories 
+modifique el width a 100% para ocupar todo el ancho */
+figure {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 00px;
+  margin-inline-end: 00px;
+  width: 100%;
+}
+
+.features .feature-card {
+  margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* empezamos con el estilo para success stories */
+
+.success-stories {
+    background-color: #a1d683;
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.success-stories .overview h2 {
+    font-family: "Alegreya", serif;
+    font-size: 51px;
+    line-height: 61px;
+    color: #025157;
+}
+
+.success-stories .overview button {
+    font-size: 14px;
+    padding: 12px 12px 6px 12px;
+    border-radius: 8px;
+    height: 45px;
+    font-weight: 600;
+    margin-left: 0;
+}
+
+button {
+    background-color: #025157;
+    color: #fff;
+    border: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 6px 20px;
+    margin-left: -10px;
+}
+
+.success-stories .overview img {
+    width: 500px;
+    max-width: 100%;
+}
+
+.success-stories .stories-carousel .card {
+    max-width: 370px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+.success-stories .overview {
+    flex: 2;
+    padding-right: 100px;
+}
+
+.success-stories .overview p {
+    color: #343434;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.success-stories .stories-carousel {
+    flex: 1;
+}
+
+.success-stories .stories-carousel .carousel-indicators {
+    position: unset;
+}
+.carousel {
+    position: relative;
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+
+.carousel-indicators li {
+    box-sizing: content-box;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-top: 10px
+    solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+
+div {
+    display: block;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+.carousel-control-next {
+    right: 0;
+}
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    -webkit-transform: none;
+    transform: none;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: -webkit-transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
+    transition: transform .6s ease-in-out,-webkit-transform .6s ease-in-out;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+.success-stories .stories-carousel .card {
+    max-width: 370px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.success-stories .stories-carousel .card .card-media {
+    position: relative;
+}
+
+.success-stories .stories-carousel .card .card-media img {
+    width: 100%;
+    max-height: 16vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.success-stories .stories-carousel .card .card-media figure {
+    margin-top: 0;
+}
+
+/* codigo css para el circulo de everly */
+.success-stories .stories-carousel .card .card-media .company {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #f9da73;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* aqui se modifica el width del logo de la compañia en el fondo del circulo */
+.success-stories .stories-carousel .card .card-media .company img {
+    max-width: 75%;
+}
+
+.success-stories .stories-carousel .card .card-body, .success-stories .stories-carousel .card .card-footer {
+    padding: 25px;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+.success-stories .stories-carousel .card .card-body h4 {
+    color: #025157;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h4 {
+    color: #46484c;
+    font-family: "Slabo 27px", serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.success-stories .stories-carousel .card .card-body h3 {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.success-stories .stories-carousel .card .card-body .results {
+    display: flex;
+    align-items: center;
+    color: #828282;
+}
+
+.success-stories .stories-carousel .card .card-body .results img {
+    width: 26px;
+    margin-right: 20px;
+}
+
+.success-stories .stories-carousel .card .card-footer {
+    margin-bottom: 20px;
+    background-color: unset;
+    border-top: unset;
+}
+
+.success-stories .stories-carousel .card .card-footer button {
+    display: block;
+    margin-left: 0;
+    border-radius: 5px;
+    font-size: 13;
+    font-weight: 600;
+    padding: 12px 20px;
+    width: 100%;
+}
+
