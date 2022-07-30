@@ -256,14 +256,15 @@ section {
   flex: 1;
   width: 40%;
   position: relative;
-  right: -50px;
+  right: -0px; /*le quite el -50 para que se viera completa la imagen*/
   height: 80%;
 }
 
 .features .feature-card .feature-image figure,
 .features .feature-card .feature-image img {
   margin-top: 0;
-  height: 100%;
+  height: 100%; /*le di una altura del 100% a la imagen de los cuadritos*/
+  width: auto; /*le di un ancho auto a la imagen de los cuadritos*/
 }
 
 /* aqui modifico los figure por ejemplo el de las 3 imagenes que estan en success stories 
@@ -674,6 +675,11 @@ h4 {
   padding: 5% 10%;
 }
 
+@media (max-width: 575px) 
+  main {
+    margin-top: 130px;
+  }
+
 @media (min-width: 576px) .container, .container-sm {
   max-width: 540px;
 }
@@ -681,6 +687,7 @@ h4 {
 @media (min-width: 768px) .container {
   max-width: 720px;
 }
+
 @media (min-width: 576px) .col-sm {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
